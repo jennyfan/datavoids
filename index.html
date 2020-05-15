@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Data Voids</title>
+    <title>Filling the Data Void | Assembly Fellowship • 2020 • Disinformation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="tachyons.min.css">
+    <link rel="stylesheet" href="assets/tachyons.min.css">
+    <link rel="stylesheet" href="assets/featherlight.min.css">
+    <!-- <link rel="stylesheet" href="assets/featherlight.gallery.min.css"> -->
   </head>
 
   <body class="mw9 pa3 pa5-ns sans-serif mid-gray">
@@ -11,7 +13,7 @@
   <!-- Title -->
   <div class="fl w-100-m w-80-ns mb6 mbt3">
       <h2 class="f4 tracked">Assembly Fellowship • 2020 • DISINFORMATION</h2>
-      <img src="diagram.png" alt="The spike and the long tail" />
+      <img src="images/diagram.png" alt="The spike and the long tail" />
       
       <h1 class="f1 f-headline-l lh-solid mb4" id="title">Filling the Data Void</h1>
 
@@ -36,7 +38,13 @@
   <!-- Hook -->
   <div class="pa2" id="hook">
     <article class="fl w-80-l w-100 f3 lh-copy mb4">
-      <p>Monday, February 3rd was a tough day for the Iowa Democratic Caucus. A glitch in a recently launched app to report results meant that voting outcomes were significantly delayed. While the US waited with baited breath, a narrative started to emerge that the faulty app was indicative of vote rigging. The conspiracy theory was encouraged by prominent political figures and news outlets which led people to search for information online about “Iowa Caucuses Rigged.” This in turn, led to claims that in the absence of credible, authoritative information that the Iowa Caucuses were <em>not</em> rigged, conspiracy theorists and propagandists successfully hijacked public discourse. Pushing a fringe narrative during such a crucial moment in the US’s political calendar would surely undermine the eventual election results and erode people’s trust in democratic processes.</p>
+      <p>The risks posed by “data voids” – the absence of high-quality, authoritative sources in search results – have only recently been explored in the context of disinformation. As gatekeepers to the information ecosystem that are both collaboratively created from public contributions, Google and Wikipedia (which features prominently in search results) are vulnerable to media manipulators seeking to distort the narrative.
+        
+      This project aims to add more structure and empirical data to the understanding of this challenge with: 1) a Harms Framework to evaluate existing and emerging data voids, and 2) a data-driven method to map the life cycle of data voids across Google search trends, Mediacloud journalistic coverage, and Wikipedia page edits.
+      
+      The life cycle timelines point to a distinction between the "interest spikes" of breaking news data voids, which are quickly filled by mainstream news coverage, and more "long tail" data voids which persist over time and slowly accumulate problematic content. The timelines also highlight the interconnected relationship between mainstream media coverage and organic search in both covering and amplifying disinformation messages, and reinforce Wikipedia's role as a potential future battleground for disinformation campaigns.
+      
+      By providing a theoretical framework on how to assess emerging data voids and a programmatic script to analyze cross-platform media coverage, we are able to better understand the scope of the problem. However, this opens up a number of questions and areas for future research on how to appropriately develop policy responses to address emerging data voids.</p>
     </article>
   </div>
 
@@ -48,6 +56,8 @@
   <!-- One column -->
   <div class="pa2">
     <article class="fl w-60-l w-100 f4">
+      <p class="measure lh-copy">Monday, February 3rd was a tough day for the Iowa Democratic Caucus. A glitch in a recently launched app to report results meant that voting outcomes were significantly delayed. While the US waited with baited breath, a narrative started to emerge that the faulty app was indicative of vote rigging. The conspiracy theory was encouraged by prominent political figures and news outlets which led people to search for information online about “Iowa Caucuses Rigged.” This in turn, led to claims that in the absence of credible, authoritative information that the Iowa Caucuses were <em>not</em> rigged, conspiracy theorists and propagandists successfully hijacked public discourse. Pushing a fringe narrative during such a crucial moment in the US’s political calendar would surely undermine the eventual election results and erode people’s trust in democratic processes.</p>
+      
       <p class="measure lh-copy">This and other recent events have ignited questions in American society on how users search for and are influenced by information. From civic trust during the Iowa Caucus to public health and safety during COVID-19, concerns have been raised over the presence of misinformation within important social and political issues, and to what extent this misinformation hijacks the public narrative when credible information is not available to balance it out.</p>
     </article>
   </div>
@@ -153,7 +163,7 @@
 
   <!-- Image -->
   <div class="pa2">
-      <img src="davidhogg.jpg" border="0" />
+      <img src="images/davidhogg.jpg" border="0" />
       <p class="i">David Hogg is interviewed on CNN to dispute crisis actor claims.</p>
   </div>
 
@@ -169,7 +179,7 @@
 
   <!-- Image -->
   <div class="pa2">
-    <img src="crisisactor.png" border="0" />
+    <img src="images/crisisactor.png" border="0" />
     <p class="i"> Google search trends for "crisis actor" (11/1/12 - 4/19/20)</p>
 </div>
 
@@ -320,7 +330,7 @@
 
     <!-- Sidebar -->
     <aside class="fr w-40-l w-100 f6 lh-copy pa4">
-      <img src="diagram.png" alt="The spike and the long tail" width="100%" />
+      <img src="images/diagram.png" alt="The spike and the long tail" width="100%" />
     </aside>
   </div>
 
@@ -340,7 +350,37 @@
 
     <!-- Sidebar -->
     <aside class="fr w-40-l w-100 f5 lh-copy pa4 ba b--dotted b--light-gray bw2">
-      Below, we have plotted the peak week of search activity for each term (in <span class="dark-red">red</span>) and layered in the specific times that authoritative media articles entered the discussion (in <span class="blue">blue</span>) and specific times that edits were made to relevant Wikipedia articles (in <span class="yellow">yellow</span>). With this data we have a timeline of when credible news sources posted about a term, relative to when searches for that data void were spiking.
+      <h3>Data void lifecycles</h3>
+
+      <p class="lh-copy mb5">Below, we have plotted the peak week of search activity for each term (in <span class="dark-red">red</span>) and layered in the specific times that authoritative media articles entered the discussion (in <span class="blue">blue</span>) and specific times that edits were made to relevant Wikipedia articles (in <span class="yellow">yellow</span>). With this data we have a timeline of when credible news sources posted about a term, relative to when searches for that data void were spiking.</p>
+
+
+      <div id="term_crisisactor" class="mb5">
+        <h4>Search query: "crisis actor"</h4>
+        <a href="#" data-featherlight="#term_crisisactor" title="Click to expand"><img src="images/term_crisisactor.JPG"  alt="Crisis Actor" /></a>
+        <br />
+        <ol class="f5 lh-copy">
+          <li>The spike in user interest is preceeded by <a href="https://www.cnn.com/2018/02/21/us/david-hogg-conspiracy-theories-response/index.html" target="_blank">Anderson Cooper's CNN interview with David Hogg</a>.</li>
+          <li>While there appear to be few Wikipedia edits, there was actually a large number of edits within a very concentrated time window.</li>
+        </ol>
+      </div>
+
+
+      <div id="term_iowa" class="mb5">
+        <h4>Search query: "Iowa Caucuses" + "rigged"</h4>
+        <a href="#" data-featherlight="#term_iowa" title="Click to expand"><img src="images/term_iowa.JPG" alt="Iowa Caucuses rigged" /></a>
+      </div>
+
+      <div id="term_pizzagate" class="mb5">
+        <h4>Search query: "Pizzagate"</h4>
+        <a href="#" data-featherlight="#term_pizzagate" title="Click to expand"><img src="images/term_pizzagate.JPG" alt="Pizzagate" /></a>
+      </div>
+      
+      <div id="term_sutherland" class="mb5">
+        <h4>Search query: "Sutherland Springs" + "antifa"</h4>
+        <a href="#" data-featherlight="#term_sutherland" title="Click to expand"><img src="images/term_sutherland.JPG" alt="Sutherland Springs antifa" /></a>
+      </div>
+
     </aside>
   </div>
 
@@ -462,6 +502,10 @@
 
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="assets/featherlight.min.js"></script>
+  <!-- <script src="assets/featherlight.gallery.min.js"></script> -->
+
+
   <script type="text/javascript">
   // handle links with @href started with '#' only
   $(document).on('click', 'a[href^="#"]', function(e) {
