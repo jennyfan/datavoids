@@ -50,11 +50,13 @@ jQuery(document).ready(function($){
 			sidebarAnimation = false,
 			resizing = false,
 			mq = checkMQ(),
+			windowWidth = $(window).width(),
 			svgCircleLength = parseInt(Math.PI*(articleSidebarLinks.eq(0).find('circle').attr('r')*2));
 		
 
 		// check media query and bind corresponding events
-		if( mq == 'desktop' ) {
+		// if( mq == 'desktop' ) {
+		if( windowWidth > 1100) {
 			$(window).on('scroll', checkRead);
 			$(window).on('scroll', checkSidebar);
 		}
@@ -112,7 +114,8 @@ jQuery(document).ready(function($){
 		$(window).off('scroll', checkRead);
 		$(window).off('scroll', checkSidebar);
 		
-		if( mq == 'desktop') {
+		// if( mq == 'desktop') {
+		if( windowWidth > 1100) {
 			$(window).on('scroll', checkRead);
 			$(window).on('scroll', checkSidebar);
 		}
@@ -122,7 +125,7 @@ jQuery(document).ready(function($){
 	function updateArticle() {
 		var scrollTop = $(window).scrollTop();
 
-		// console.log("updateArticle");
+		console.log("updateArticle", scrollTop);
 
 		articles.each(function(){
 			var article = $(this),
@@ -176,8 +179,6 @@ jQuery(document).ready(function($){
 	}
 
 	function checkMQ() {
-
-		// console.log("mq desktop");
 		return window.getComputedStyle(articlesWrapper.get(0), '::before').getPropertyValue('content').replace(/'/g, "").replace(/"/g, "");
 	}
 });
