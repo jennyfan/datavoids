@@ -1,5 +1,144 @@
 /*! TACHYONS v4.12.0 | http://tachyons.io */
 
+/*** CUSTOM CSS ****/
+aside {
+    color: #999999;
+}
+article {
+	display: inline-block;
+	width: 100%;
+}
+
+.menu {
+	background-color: #f2f2f2;
+	display: none;
+  }
+  .menu ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+  }
+  .menu li {
+	list-style: none;
+	flex-grow: 1;
+	counter-increment: articles;
+  }
+  .menu a {
+	display: block;
+	position: relative;
+	padding: 1.6em 1.1em 1.6em 4.3em;
+  }
+  .menu a::before, .menu a::after {
+	position: absolute;
+  }
+  .menu a::before {
+	/* article number */
+	content: counter(articles);
+	top: 50%;
+	bottom: auto;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 1.1em;
+	width: 36px;
+	height: 36px;
+	line-height: 34px;
+	border-radius: 50%;
+	color: #b3b3b3;
+	font-family: Georgia, serif;
+	text-align: center;
+	box-shadow: inset 0 0 0 1px #d9d9d9;
+	-webkit-transition: background-color 0.3s, color 0.3s;
+	-moz-transition: background-color 0.3s, color 0.3s;
+	transition: background-color 0.3s, color 0.3s;
+  }
+  .menu a::after {
+	/* bottom separation - line */
+	content: '';
+	left: 50%;
+	right: auto;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	bottom: 0;
+	height: 1px;
+	width: 260px;
+	background-color: #d9d9d9;
+  }
+  .menu a.read em {
+	color: #a6a6a6;
+  }
+  .menu a.read::before {
+	background-color: #d9d9d9;
+  }
+  .menu a.reading em {
+	color: #2a76e8;
+  }
+  .menu a.reading svg {
+	display: block;
+  }
+  .menu a.reading::before {
+	background-color: #ffffff;
+	color: #141414;
+  }
+  .menu li:last-of-type a::after {
+	display: none;
+  }
+  .menu em {
+	display: block;
+	font-size: 1.4rem;
+	line-height: 1.2;
+	color: #141414;
+	/* truncate text with ellipsis */
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
+  }
+  .menu b {
+	color: #a6a6a6;
+	font-size: 1.2rem;
+	font-family: Georgia, serif;
+	font-style: italic;
+  }
+  .menu svg {
+	/* this is the filling circle around the article number */
+	display: none;
+	position: absolute;
+	top: 50%;
+	bottom: auto;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 1.1em;
+	stroke: #2a76e8;
+  }
+  @media only screen and (min-width: 1100px) {
+	.menu {
+	  display: block;
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	}
+	.menu.fixed {
+	  position: fixed;
+	  top: 0;
+	  /* right: calc(50% - 485px); */
+	}
+  }
+  
 
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 
@@ -11,9 +150,6 @@ html {
 body {
     margin: 0;
     font-weight: 400;
-}
-aside {
-    color: #999999;
 }
 
 h1 {
@@ -78,7 +214,7 @@ sup {
 }
 
 img {
-	border-style: none
+	border-style: none;
 }
 
 button,
