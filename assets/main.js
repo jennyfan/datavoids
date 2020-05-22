@@ -1,26 +1,3 @@
-// handle links with @href started with '#' only
-$(document).on('click', 'a[href^="#"]', function(e) {
-    // target element id
-    var id = $(this).attr('href');
-
-    // target element
-    var $id = $(id);
-    if ($id.length === 0) {
-        return;
-    }
-
-    // prevent standard hash navigation (avoid blinking in IE)
-    e.preventDefault();
-
-    // top position relative to the document
-	var pos = $id.offset().top - 64;
-	console.log("pos", pos);
-
-    // animated top scrolling
-    $('body, html').animate({scrollTop: pos});
-});
-
-
 // show sidebar on scroll
 sidebar = $("aside").fadeTo(0, 0);
 
@@ -33,8 +10,26 @@ $(window).scroll(function(d,h) {
 })
 
 
-// Progress reading ticker
 
+// SMOOTH SCROLLING
+$(document).on('click', 'a[href^="#"]', function(e) {
+	var id = $(this).attr('href');
+
+	var $id = $(id);
+	if ($id.length === 0) {
+		return;
+	}
+
+	e.preventDefault();
+
+	// top position relative to the document. offset by menu height
+	var pos = $id.offset().top - 64;
+	$('body, html').animate({scrollTop: pos});
+
+});
+
+
+// // Progress reading ticker
 jQuery(document).ready(function($){
 	var articlesWrapper = $('.cd-articles');
 
@@ -66,7 +61,7 @@ jQuery(document).ready(function($){
 		updateArticle();
 		updateSidebarPosition();
 
-		nav.on('click', 'a', function(event){
+		nav.on('click', '.menu a', function(event){
 			event.preventDefault();
 			var selectedArticle = articles.eq($(this).parent('li').index()),
 				selectedArticleTop = selectedArticle.offset().top - 64;
@@ -76,7 +71,7 @@ jQuery(document).ready(function($){
 			$('body,html').animate(
 				{'scrollTop': selectedArticleTop}, 
 				300, function(){
-					console.log("scrollTop: ", selectedArticleTop);
+					// console.log("scrollTop: ", selectedArticleTop);
 
 					checkRead();
 					$(window).on('scroll', checkRead);
@@ -125,7 +120,7 @@ jQuery(document).ready(function($){
 	function updateArticle() {
 		var scrollTop = $(window).scrollTop();
 
-		console.log("updateArticle", scrollTop);
+		// console.log("updateArticle", scrollTop);
 
 		articles.each(function(){
 			var article = $(this),
