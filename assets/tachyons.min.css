@@ -1,8 +1,34 @@
 /*! TACHYONS v4.12.0 | http://tachyons.io */
 
 /*** CUSTOM CSS ****/
+@font-face {
+	font-family: 'Leitura Display';
+	src: url('fonts/LeituraDisplay-Roman.eot');
+	src: url('fonts/LeituraDisplay-Roman.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/LeituraDisplay-Roman.svg#LeituraDisplay-Roman') format('svg'),
+		 url('fonts/LeituraDisplay-Roman.ttf') format('truetype'),
+		 url('fonts/LeituraDisplay-Roman.woff') format('woff'),
+		 url('fonts/LeituraDisplay-Roman.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+  }
+  @font-face {
+	font-family: 'Leitura-Roman1';
+	src: url('Leitura-Roman1.eot');
+	src: url('Leitura-Roman1.eot?#iefix') format('embedded-opentype'),
+		 url('Leitura-Roman1.svg#Leitura-Roman1') format('svg'),
+		 url('Leitura-Roman1.ttf') format('truetype'),
+		 url('Leitura-Roman1.woff') format('woff'),
+		 url('Leitura-Roman1.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+  }
+  
+  
+  
+
 aside {
-    color: #999999;
+	color: #999999;
 }
 article {
 	display: inline-block;
@@ -50,7 +76,7 @@ article {
 	line-height: 34px;
 	border-radius: 50%;
 	color: #b3b3b3;
-	font-family: Georgia, serif;
+	/* font-family: Georgia, serif; */
 	text-align: center;
 	box-shadow: inset 0 0 0 1px #d9d9d9;
 	-webkit-transition: background-color 0.3s, color 0.3s;
@@ -107,7 +133,7 @@ article {
   .menu b {
 	color: #a6a6a6;
 	font-size: 1.2rem;
-	font-family: Georgia, serif;
+	/* font-family: Georgia, serif; */
 	font-style: italic;
   }
   .menu svg {
@@ -1283,11 +1309,11 @@ img {
 }
 
 .sans-serif {
-	font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif
+	font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
 }
 
 .serif {
-	font-family: georgia, times, serif
+	font-family: "Leitura Roman", Georgia, times, serif
 }
 
 .system-sans-serif {
@@ -1492,10 +1518,10 @@ code {
 
 .lh-title {
 	line-height: 1.25 
-}
+} 
 
 .lh-copy {
-	line-height: 1.5
+	line-height: 1.65
 }
 
 a {
@@ -7877,7 +7903,9 @@ a:hover {
 	}
 	.f-6-l,
 	.f-headline-l {
-		font-size: 6rem
+		font-size: 6rem;
+		letter-spacing: 2px;
+		font-family: "Leitura Display", Georgia, serif;
 	}
 	.f-5-l,
 	.f-subheadline-l {
